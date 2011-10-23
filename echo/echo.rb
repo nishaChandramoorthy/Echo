@@ -32,9 +32,9 @@ get '/category/?query' do
       coll = db.collection("testCollection")
       result = []
       counter = 0
-	tempquery = params[:query]
-	temp = tempquery.split("+")
-	temp.each { |query|
+      tempquery = params[:query]
+      temp = tempquery.split("+")
+      temp.each { |query|
 		s = query.length
 		n = s
 		while n > 2 
@@ -52,7 +52,7 @@ get '/category/?query' do
 		end
 		n = n-1
 		end
-	}
+      }
       if result.empty? == false
       haml :category, :locals => { :results => result}
       else
