@@ -3,19 +3,27 @@ require 'mongo'
 require 'haml'
 
 class EchoRecommender
-  attr_accessor :uuid, :db
-  def getSimilarDocument(uuid)
+  
 
-   return uuid
+  def getSimilarBooks(uuid)
+    db = Mongo::Connection.new('127.0.0.1',27017).db('echo')
+    @book = db.collection('book')
+     res = []
+    @book.find({"id" => uuid}).each{
+                                      |doc| @book.find({"cluster" => doc['cluster']}, :fields => ["id"] ).
+                                      each{
+                                        |b|
+                                        res.push(b)
+                                      }
+                                  }
+                                  p res
+                                  return res
+                        
+                            end
+                    )
+         
 
   end
 end
-if __FILE__ == $0
 
-    reco =EchoRecommender.new
-    reco.db= "mongodbofcourse"
-    p reco.getSimilarDocument("hello")
-    p reco.db
-  
-end
 

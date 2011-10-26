@@ -1,4 +1,5 @@
 require 'haml'
+require 'EchoRecommender.rb'
 require 'sinatra'
 require 'json'
 require 'rest_client'
@@ -57,7 +58,7 @@ def getResults(res)
   $results =[]
   bookResults=[]
   sResults=JSON.parse(res.to_json)
-  sResults.each{ |book| $results.push(Array(book.find("id" => book['id'])))}
+  sResults.each{ |book| $results.push(Array(@book.find("id" => book['id'])))}
   $results.each { |book|
     bookResults.push(Array({
       "title"=>book['title'],
@@ -77,8 +78,9 @@ get '/search/?' do
   $res = RestClient.get url , :content_type => json, :accept => json
   searchResults=getResults($res)
   bid = $searchResults[0]['id']
-  url1='http://localhost:8080/search/?rec='+ bid
-  $res1 = RestClient.get url1, :content_type => json, :accept => json
+  #getting the recommendation results
+  
+  $res1 = getSimilarBooks(bid)
   recResults = getResults($res1)
   if bookResults.nil? settings.log.info('Error retrieving results from Echo Server ...')
   
