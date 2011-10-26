@@ -2,7 +2,7 @@ require 'sinatra'
 require 'mongo'
 require 'haml'
 
-class EchoRecommender
+
   
 
   def getSimilarBooks(uuid)
@@ -24,6 +24,6 @@ class EchoRecommender
          
 
   end
-end
+
 
 
