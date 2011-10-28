@@ -1,6 +1,5 @@
-require 'sinatra'
+
 require 'mongo'
-require 'haml'
 
 
   
@@ -10,7 +9,7 @@ require 'haml'
     @book = db.collection('book')
      res = []
     @book.find({"id" => uuid}).each{
-                                      |doc| @book.find({"cluster" => doc['cluster']}, :fields => ["id"] ).
+                                      |doc| @book.find({"cluster" => doc['cluster']}, :fields=>["id"]).
                                       each{
                                         |b|
                                         res.push(b)
@@ -20,10 +19,10 @@ require 'haml'
                                   return res
                         
                             end
-                    )
+                  
          
 
-  end
+  
 
 
 
