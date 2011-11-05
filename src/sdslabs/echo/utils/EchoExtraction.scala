@@ -64,6 +64,7 @@ import org.json.simple.JSONObject
 import org.json.simple.JSONArray
 import java.io.BufferedReader
 import java.io.InputStreamReader
+import sdslabs.echo.utils.EchoConfigAccessor
 import java.lang.NullPointerException
 import scala.collection.JavaConversions._
 
@@ -112,8 +113,9 @@ class EchoExtraction {
                                                                                                                                                                                                       }
                                                                                                                                                                                                         
                                                                                                                                                                                                         def store(id : String, cat : String) {
-                                                                                                                                                                                                              var m : Mongo = new Mongo( "localhost" )
-                                                                                                                                                                                                                  var db : DB = m.getDB( "mydb" )
+                                                                                                                                                                                                              var m : Mongo = new Mongo(EchoConfigAccessor.getString("echo.db.ipAdd"))
+                                                                                                                                                                                                                  var db : DB = m.getDB( EchoConfigAccessor.getString("echo.db") )
+
                                                                                                                                                                                                                     var doc : BasicDBObject = new BasicDBObject()
                                                                                                                                                                                                                       var coll : DBCollection = db.getCollection("category")
                                                                                                                                                                                                                         }

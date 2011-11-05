@@ -22,7 +22,7 @@ class EchoIndexing() {
   private val writer: IndexWriter = new IndexWriter(indexDir, new StandardAnalyzer(Version.LUCENE_33), true, IndexWriter.MaxFieldLength.UNLIMITED)
   
   def indexDocument( doc: EchoDocument){
-	//val writer: IndexWriter = new IndexWriter(indexDir, new WhitespaceAnalyzer(Version.LUCENE_33), true, IndexWriter.MaxFieldLength.UNLIMITED)
+	val writer: IndexWriter = new IndexWriter(indexDir, new WhitespaceAnalyzer(Version.LUCENE_33), true, IndexWriter.MaxFieldLength.UNLIMITED)
     EchoLogger.info("Adding document " + doc.file.getName() + " and id " + doc.docId + " to the indexes")
     writer.addDocument(doc.getDocument)
     writer.commit()
