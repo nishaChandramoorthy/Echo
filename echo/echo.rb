@@ -1,9 +1,8 @@
 require 'haml'
-require 'EchoRecommender.rb'
+load 'lib/EchoRecommender.rb'
 require 'sinatra'
 require 'json'
 require 'rest_client'
-require 'mongo_mapper'
 require 'mongo'
 
 ECHO_ROOT= File.join(File.expand_path(File.dirname(__FILE__)), '..') unless defined?(ECHO_ROOT)
@@ -85,8 +84,22 @@ get '/search/?' do
   settings.log.info('echo got your search term:' + query)
   raise ArgumentError, 'Give the search query after /search/' if query.nil?
   url='http://localhost:8080/search/?query='+ query
-  $res = RestClient.get url , :content_type => json, :accept => json
-  searchResults=getResults($res)
+  $res = RestClient.get(url){ |response, request, result, &block|
+                              case response.code
+                              when 200
+                                p "Results returned.Echo Bows!"
+                                res = JSON.parse(response.body)
+                                $searchResults=getResults(res)
+                              else
+                                redirect '/noResults'
+                              end
+  }
+
+                                
+                                
+                                
+                                
+                                
   bid = $searchResults[0]['id']
   #getting the recommendation results
   
@@ -100,7 +113,9 @@ get '/search/?' do
   end
 end
 
-
+get '/noResults' do
+  haml :noResults
+end
 
   
   
