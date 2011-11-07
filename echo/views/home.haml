@@ -1,0 +1,95 @@
+!!!XML
+!!!
+%html 
+  %head
+    %meta{:charset => "utf-8"}
+    %title Echo
+    %link{:href => "http://twitter.github.com/bootstrap/1.3.0/bootstrap.css", :rel => "stylesheet"}
+
+    %script{:type => "text/javascript", :src => "http://code.jquery.com/jquery-1.7.min.js"}
+    %script{:type => "text/javascript", :src => "pdfobject.js"}
+    %script{:type => "text/javascript", :src => "http://twitter.github.com/bootstrap/1.4.0/bootstrap-modal.js"}
+    :javascript
+      function showbooks(){
+         var url = window.mousetarget.id;
+         $('#book-view-name').html("The Lord of The Rings");
+         var myPDF = new PDFObject({url: url,
+                                    width: "530px",
+                                    height: "530px",
+                                    pdfOpenParams: {
+                                      navpanes: 1,
+                                      statusbar: 1,
+                                      view: "FitH",
+                                      pagemode: "thumbs"
+                                    }  
+                                   }).embed("book-show");
+      }
+      
+      function getResult(){
+        var query = $('#search').val();
+        $.ajax({
+          url: "/search/?query="+query,
+          context: document.body,
+          success: function(data){
+            $("#result").html(data);          
+          }
+        });
+      }
+
+      window.onload = function(){
+        
+        $('#book-modal').bind('shown', function(){ 
+          showbooks();
+        }); 
+
+      };
+    
+  %body{:style => "padding-top:0px;" }
+    %div.row
+    %div.row
+      %div.span12.offset6
+        %input{:id => "search", :name => "search", :size => "80", :type => "text", :style => "height: 30px;"}           
+        %button.btn.success{ :href => "#", :onclick => "getResult();"}
+ 
+    %div.container-fluid
+      %div.sidebar
+        %div.well
+          %h5 Sidebar
+          %ul
+            %li asdf
+            %li asdf
+            %li asdf
+            %li asdf
+          %ul
+          %h5 Sidebar
+          %ul
+            %li> asdf
+ 
+      %div.content
+        <!-- Main hero unit for a primary marketing message or call to action -->
+        %div.hero-unit
+          %div.row
+            %div.span11
+              %div.row{:id => "result"}
+                %div.span3
+                  %dl
+                    %dd 
+                      %img{ :src => "data:image/jpg;base64,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"} 
+    
+                    %dt The Lord of The Rings 
+                    %dt J R R Tolkein 
+                    %dd Awesome book.. You dont need me to tell anythign abt it.. just go and read it
+                    <button data-controls-modal="book-modal" data-backdrop="true" data-keyboard="true" class="btn primary" onmousedown="window.mousetarget = this;" id="book.pdf">View</button>
+                    %a.btn.success{:href => "book.pdf"} Download
+ 
+            %div.span3
+              Hi I am Echo and I will show u recommendation for the books that u are vieweing now. Please tell me how is the recommedation because it its not good then I will try changing ht algo. Although I am not actually recommending.. I am trying to fool u as far as I can... :P      
+           
+      %hr
+ 
+      %div.modal.hide.fade.in{ :style => "display: block; height: 600px;", :id => "book-modal"}
+        %div.modal-header
+          %a.close{ :href => "#" } x
+          %h3{:id => "book-view-name"}
+        %div.modal-body{ :id => "book-show"}
+   
