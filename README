@@ -1,9 +1,0 @@
-==== Echo ====
-
-Echo is an ebook search engine, that does complete text indexinh thus allows to search anything inside the book.
-
-==== Architecture ====
-The current architecture has the following parts:
-
-- Web Pages
-  < Contains all the 
