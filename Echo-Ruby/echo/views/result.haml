@@ -1,0 +1,6 @@
+%div.row
+- @results.each do |res|
+  %div.span3
+    %dl
+      %dd
+        <a href="#"  rel="popover" data-content="#{res["description"]}" data-original-title="#{res["title"]}"> <img src = "#{res["small"]}" style = "height: 162px; width: 102px;" /> </a>

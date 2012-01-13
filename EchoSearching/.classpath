@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="/home/sdslabs/EchoInstallations/lib/jetty-ajp-7.5.4.v20111024.jar"/>
+	<classpathentry kind="lib" path="/home/sdslabs/EchoInstallations/lib/jetty-all-7.5.4.v20111024-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/sdslabs/EchoInstallations/lib/jetty-annotations-7.5.4.v20111024.jar"/>
+	<classpathentry kind="lib" path="/home/sdslabs/EchoInstallations/lib/jetty-client-7.5.4.v20111024.jar"/>
+	<classpathentry kind="lib" path="/home/sdslabs/EchoInstallations/lib/jetty-continuation-7.5.4.v20111024.jar"/>
+	<classpathentry kind="lib" path="/home/sdslabs/EchoInstallations/lib/jetty-deploy-7.5.4.v20111024.jar"/>
+	<classpathentry kind="lib" path="/home/sdslabs/EchoInstallations/lib/jetty-http-7.5.4.v20111024.jar"/>
+	<classpathentry kind="lib" path="/home/sdslabs/EchoInstallations/lib/jetty-io-7.5.4.v20111024.jar"/>
+	<classpathentry kind="lib" path="/home/sdslabs/EchoInstallations/lib/jetty-jmx-7.5.4.v20111024.jar"/>
+	<classpathentry kind="lib" path="/home/sdslabs/EchoInstallations/lib/jetty-jndi-7.5.4.v20111024.jar"/>
+	<classpathentry kind="lib" path="/home/sdslabs/EchoInstallations/lib/jetty-overlay-deployer-7.5.4.v20111024.jar"/>
+	<classpathentry kind="lib" path="/home/sdslabs/EchoInstallations/lib/jetty-plus-7.5.4.v20111024.jar"/>
+	<classpathentry kind="lib" path="/home/sdslabs/EchoInstallations/lib/jetty-policy-7.5.4.v20111024.jar"/>
+	<classpathentry kind="lib" path="/home/sdslabs/EchoInstallations/lib/jetty-rewrite-7.5.4.v20111024.jar"/>
+	<classpathentry kind="lib" path="/home/sdslabs/EchoInstallations/lib/jetty-security-7.5.4.v20111024.jar"/>
+	<classpathentry kind="lib" path="/home/sdslabs/EchoInstallations/lib/jetty-server-7.5.4.v20111024.jar"/>
+	<classpathentry kind="lib" path="/home/sdslabs/EchoInstallations/lib/jetty-servlet-7.5.4.v20111024.jar"/>
+	<classpathentry kind="lib" path="/home/sdslabs/EchoInstallations/lib/jetty-servlets-7.5.4.v20111024.jar"/>
+	<classpathentry kind="lib" path="/home/sdslabs/EchoInstallations/lib/jetty-util-7.5.4.v20111024.jar"/>
+	<classpathentry kind="lib" path="/home/sdslabs/EchoInstallations/lib/jetty-webapp-7.5.4.v20111024.jar"/>
+	<classpathentry kind="lib" path="/home/sdslabs/EchoInstallations/lib/jetty-websocket-7.5.4.v20111024.jar"/>
+	<classpathentry kind="lib" path="/home/sdslabs/EchoInstallations/lib/jetty-xml-7.5.4.v20111024.jar"/>
+	<classpathentry kind="lib" path="/home/sdslabs/EchoInstallations/lib/json-rpc-1.0.jar"/>
+	<classpathentry kind="lib" path="/home/sdslabs/EchoInstallations/lib/lucene-core-3.3.0.jar"/>
+	<classpathentry kind="lib" path="/home/sdslabs/EchoInstallations/lib/servlet-api-2.5.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

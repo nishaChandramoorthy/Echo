@@ -1,0 +1,6 @@
+.loader-bar{min-width:220px;min-height:19px;background:url('http://192.168.208.208/muzi/images/ajax-loader.gif') center no-repeat white;height:100%;width:100%}
+.content .span11{
+margin-left:0;width:75%;
+}
+#rec-block{margin-left:0;width:25%}
+.span14{position:absolute;top:50px;left:50%;margin-left:-410px!important}

@@ -1,0 +1,10 @@
+%div.row
+- @result.each do |res|
+  %div.span3
+    %dl
+      %dd
+        %img{ :src => "#{res[:icon]}" }
+      %dt= res[:title]
+      %dt= res[:author]
+      <button data-controls-modal="book-modal" data-backdrop="true" data-keyboard="true" class="btn primary" onmousedown="window.mousetarget = this;" id="#{res[:id]}"}>View</button>
+      %a.btn.success{:href => "/book/?id=#{res[:id]}&name=#{res[:title]}"} Download

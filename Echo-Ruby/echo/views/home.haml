@@ -1,0 +1,86 @@
+!!!XML
+!!!
+%html 
+  %head
+    %meta{:charset => "utf-8"}
+    %title Echo
+    %link{:href => "https://cdn.sdslabs.co.in/css/css/bootstrap/1.4.0/bootstrap.min.css", :rel => "stylesheet"}
+    %link{:href => "style.css", :rel => "stylesheet"}
+
+    %script{:type => "text/javascript", :src => "https://cdn.sdslabs.co.in/cdnjs/ajax/libs/jquery/1.6.2/jquery.min.js"}
+    %script{:type => "text/javascript", :src => "pdfobject.js"}
+    %script{:type => "text/javascript", :src => "main.js"}
+    %script{:type => "text/javascript", :src => "bootstrap/bootstrap-modal.js"}
+    %script{:type => "text/javascript", :src => "bootstrap/bootstrap-twipsy.js"}
+    %script{:type => "text/javascript", :src => "bootstrap/bootstrap-popover.js"}
+    :css
+      .start-disable {
+        display: none;
+      }
+    %link{:type => "text/css", :href => "https://sdslabs.co.in/comet/cometchatcss.php", :rel => "stylesheet", :charset => "utf-8"}
+    %link{ :rel => "stylesheet", :href => "topbarwide.css"}
+    
+
+  %body{:style => "padding-top:80px;" }
+    %br
+    %div.row
+      %div.span14.offset4
+        %div.row
+          %div.span5 
+            %a{ :href => "http://echo.sdslabs.co.in" } 
+              %img{ :src => "Echologo.png",  :style => "height : 100px; margin-top: -40px;"}
+          %div.span5
+            %input.xlarge{:id => "search", :name => "search", :type => "text" }     
+          %div.span2
+            %button.btn.primary.default{ :href => "#", :onclick => "getResult(); return false;", :style => "width: 100%; height: 100%"} Books
+          %div.span2
+            %button.btn.primary.default{ :href => "#", :onclick => "getCategoryResult(); return false;", :style => "width: 100%; height: 100%"} Category
+
+    %br 
+    %br
+
+    %div.row#back
+      %div.container
+        %img{ :src => "back.jpg" }
+
+    %div.container-fluid.start-disable
+      %div.sidebar#details
+ 
+      %div.content
+        %div.hero-unit
+          %div.row
+            %div.span11
+              %div.row{:id => "result"}
+                %div.span3
+                  %dl
+ 
+            %div.span4#rec-block
+              %div.row 
+                %p#rh 
+                %hr
+              %div.row#recommendation
+           
+      %hr
+ 
+      %div.modal.hide.fade.in{ :style => "height: 700px; margin-top: -300px; width: 800px; margin-left: -400px", :id => "book-modal"}
+        %div.modal-header
+          %a.close{ :href => "#" } x
+          %h3{:id => "book-view-name"}
+        %div.modal-body{ :id => "book-show"}
+
+
+    <!-- Piwik --> 
+    <script type="text/javascript">
+    var pkBaseURL = (("https:" == document.location.protocol) ? "https://stat.sdslabs.co.in/" : "http://stat.sdslabs.co.in/");
+    document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+    </script><script type="text/javascript">
+    try {
+    var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+    piwikTracker.trackPageView();
+    piwikTracker.enableLinkTracking();
+    } catch( err ) {}
+    </script><noscript><p><img src="https://stat.sdslabs.co.in/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+    <!-- End Piwik Tracking Code -->
+    %script{ :type => "text/javascript" ,:src => "https://sdslabs.co.in/comet/cometchatjs.php", :charset => "utf-8"}
+    <script>$(document).ready(function(){ topbar.showTopbar(); });</script>
+

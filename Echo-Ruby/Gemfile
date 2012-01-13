@@ -1,0 +1,9 @@
+source :gemcutter
+
+gem 'sinatra'
+gem 'mongo'
+gem 'json'
+gem 'rest-client'
+gem 'haml'
+gem 'bson_ext'
+

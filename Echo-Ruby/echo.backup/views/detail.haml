@@ -1,0 +1,14 @@
+%dl
+  %dd
+    %img{ :src => "#{@result['thumbnail']}" }
+  %dt= res["title"]
+  %dt= res["author"]
+  %dt Pages: 
+    = @result["page-count"]
+  %dt Publisher:
+    = @result["publisher"]
+  %dt Published date:
+    = @result["publishedDate"]
+  %dt Categories
+    = @result["categories"]
+  %dt  
