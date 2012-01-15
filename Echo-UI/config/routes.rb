@@ -55,4 +55,24 @@ EchoUI::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
+
+  resources :users do
+    resources :bookshelves do
+      member do 
+        get 'next/:index', :action => 'next'
+      end
+    end
+
+    member do
+        get 'recommended_bookshelves'
+        get 'recommended_books'
+        get 'viewed_history'
+        get 'search_history'
+    end
+    get 'favorites', :on => :collection
+  end
+
+  match "popular_books" => "statistics#popular_books"
+  match "currently_read" => "statistics#currently_read"
+
 end

@@ -23,10 +23,10 @@ class User
   field :favorites, type: Array
 
   # History of searches
-  embeds_many :search_histories, validates: false
+  embeds_many :search_histories, validate: false
   
   # History of viewed books
-  embeds_many :viewed_histories, validates: false
+  embeds_many :viewed_histories, validate: false
 
   # bookshelf maintained by user
   embeds_many :bookshelves, validate: false
@@ -37,5 +37,11 @@ class User
 
   index "user_id", background: true
   index "sdslabs_id", background: true
+  
+  key :user_id
+  
+  def to_param
+    user_id
+  end
   
 end
