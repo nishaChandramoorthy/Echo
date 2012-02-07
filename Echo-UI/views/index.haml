@@ -1,5 +1,125 @@
 %html
   %head
-  %body
-    %div
+    %link(rel="stylesheet" type="text/css" href="css/bootstrap.css")
+    :css
+      body {
+        padding-top: 40px;
+        padding-botton: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+      .container-fluid {
+        padding-left: 250px;
+        padding-right: 250px;
+      }
 
+    %link(rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css")
+
+    :css
+      .container {
+        width:940px;
+      }
+      .span3 {
+        height:100%;
+      }
+      .well {
+        height: 100%;
+      }
+      .search-query {
+        height: 28px;
+      }
+    %script(src="js/bootstrap-dropdown.js" type="text/javascript")
+
+  %body
+    %div.navbar.navbar-fixed-top
+      %div.navbar-inner
+        %div.container
+          %a.btn.btn-navbar(data-toggle="collapse"  data-target=".nav-collapse")
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.brand(href="#") Echo
+          %div.nav-collapse.in.collapse
+            %ul.nav
+              %li
+                %a(href="#") 
+                  %i.icon-home.icon-white
+                  Home
+              %li
+                %a(href="#")
+                  %i.icon-book.icon-white
+                  Bookshelf
+              %li
+                %a(href="#")
+                  %i.icon-comment.icon-white
+                  Suggestions
+              %li
+                %a(href="#")
+                  %i.icon-bookmark.icon-white
+                  Reading List
+            %form.navbar-search.pull-left
+              %input.search-query.span2(placeholder="Search" type="text")  
+            %ul.nav.pull-right
+              %li.dropdown
+                %a.dropdown-toggle(href="#" data-toggle="dropdown")
+                  %i.icon-cog.icon-white
+                  %b.caret
+                %ul.dropdown-menu
+                  %li
+                    %a(href="#")
+                      %i.icon-user
+                      Profile
+    %div.container
+      %div.row
+        %div.span3
+          %div.well.sidebar-nav
+            %ul.nav.nav-list
+              %li.nav-header User
+              %li
+                %a(href="#")
+                  %i.icon-home 
+                  Home
+              %li
+                %a(href="#")
+                  %i.icon-search 
+                  Search
+              %li
+                %a(href="#")
+                  %i.icon-book 
+                  Bookshelf
+              %li
+                %a(href="#")
+                  %i.icon-comment 
+                  Suggestions
+              %li
+                %a(href="#")
+                  %i.icon-time 
+                  History
+              %li
+                %a(href="#")
+                  %i.icon-glass 
+                  Communities
+              %li
+                %a(href="#")
+                  %i.icon-bookmark 
+                  Reading List
+              %li
+                %a(href="#")
+                  %i.icon-heart 
+                  Friends
+              %li
+                %a(href="#")
+                  %i.icon-star
+                  News Feeds
+              %li.nav-header Settings
+              %li
+                %a(href="#")
+                  %i.icon-user
+                  Profile
+              %li
+                %a(href="#")
+                  %i.icon-picture
+                  Theme
+        %div.span5
+    
