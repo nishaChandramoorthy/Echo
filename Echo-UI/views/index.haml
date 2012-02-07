@@ -37,7 +37,7 @@
         margin-left: 0px;
         margin-top: -10px;
       }
-      hr {
+      .footer-hr {
         margin-top: 0px;
       }
       .remove-padding-bottom {
@@ -57,6 +57,17 @@
         height: 125px;
         width: 125px;
         overflow:hidden;
+      }
+      .user-info {
+        font-style: normal;
+        font-size: 13px;
+        padding: 6px 37px 6px 21px;
+      }
+      dep {
+        font-size: 10px;
+      }
+      year {
+        font-size: 10px;
       }
 
     %script(src="js/jquery.js" type="text/javascript")
@@ -112,9 +123,16 @@
               %li.profile-pic-container
                 %a.profile-pic(href="#")
                   %img(src="img/user.jpg" alt="Kumar Ishan")
+              %li.user-info
+                %strong Kumar Ishan  
+                %br
+                %dep Computer Science Engineering
+                %br
+                %year 4th Year
+              %hr
               %li
                 %a(href="#")
-                  %i.icon-star 
+                  %i.icon-envelope
                   Activity        
               %li
                 %a(href="#")
@@ -122,39 +140,30 @@
                   Search
               %li
                 %a(href="#")
-                  %i.icon-book 
-                  Bookshelf
-              %li
-                %a(href="#")
                   %i.icon-comment 
                   Suggestions
               %li
                 %a(href="#")
-                  %i.icon-time 
-                  History
-              %li
-                %a(href="#")
-                  %i.icon-glass 
-                  Communities
+                  %i.icon-book 
+                  Bookshelf
               %li
                 %a(href="#")
                   %i.icon-bookmark 
                   Reading List
               %li
                 %a(href="#")
+                  %i.icon-glass 
+                  Communities
+              %li
+                %a(href="#")
                   %i.icon-heart 
                   Friends
-              %li.nav-header Settings
               %li
                 %a(href="#")
-                  %i.icon-user
-                  Profile
-              %li
-                %a(href="#")
-                  %i.icon-picture
-                  Theme
+                  %i.icon-time 
+                  History
         %div.span5.main-content
           %div.well.remove-padding-bottom.remove-margin-bottom
-      %hr
+      %hr.footer-hr
       %footer
         %p@ SDSLabs 2012     
