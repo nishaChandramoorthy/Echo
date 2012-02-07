@@ -69,6 +69,10 @@
       year {
         font-size: 10px;
       }
+      .sidebar-count {
+        margin-right: -12px;
+        float: right;
+      }
 
     %script(src="js/jquery.js" type="text/javascript")
     %script(src="js/bootstrap-dropdown.js" type="text/javascript")
@@ -134,6 +138,8 @@
                 %a(href="#")
                   %i.icon-envelope
                   Activity        
+                  %div.sidebar-count
+                    %span.label.label-info 15
               %li
                 %a(href="#")
                   %i.icon-search 
@@ -142,22 +148,32 @@
                 %a(href="#")
                   %i.icon-comment 
                   Suggestions
+                  %div.sidebar-count
+                    %span.label.label-info 10 
               %li
                 %a(href="#")
                   %i.icon-book 
                   Bookshelf
+                  %div.sidebar-count
+                    %span.label.label-info 8
               %li
                 %a(href="#")
                   %i.icon-bookmark 
                   Reading List
+                  %div.sidebar-count
+                    %span.label.label-info 5
               %li
                 %a(href="#")
                   %i.icon-glass 
                   Communities
+                  %div.sidebar-count
+                    %span.label.label-info 7
               %li
                 %a(href="#")
                   %i.icon-heart 
                   Friends
+                  %div.sidebar-count 
+                    %span.label.label-info 100
               %li
                 %a(href="#")
                   %i.icon-time 
