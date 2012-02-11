@@ -17,7 +17,7 @@
     %link(rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css")
 
     :css
-      .container {
+      .container-940 {
         width:940px;
       }
       .sidebar{
@@ -40,8 +40,8 @@
       .footer-hr {
         margin-top: 0px;
       }
-      .remove-padding-bottom {
-        padding-bottom: 0px;
+      .adjust-padding-bottom {
+        padding-bottom: 15px;
       }
       .remove-margin-bottom {
         margin-bottom: 0px;
@@ -76,8 +76,103 @@
       .navbar .app-logo {
         font-weight: bold;
       }
-      .main-breadcrumb {
-        margin-left: 30px;
+      .transparent {
+        background: url(img/wash-white-30.png);
+      }
+      .inside-main{
+        margin: 0px;
+        padding: 1px;
+        position: relative;
+      }
+      .encap-main {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 20px;
+      }
+      .inside-container {
+        margin: 0px;
+        padding: 0px;
+      }
+      hr {
+        border-color: gray;
+      }
+      .breadcrumb {
+        margin-bottom: 5px;
+      }
+      .main-header-partition {
+        margin: 5px;
+      }
+      .book-pic-medium {
+        height: 100px;
+        width: 75px;
+      }
+      .activity-feed {
+        margin: 2px 2px 10px 6px;
+      }
+      .activity-container {
+        display: block;
+      }
+      
+      .activity-book-topic { 
+        margin: 1px 1px 8px 1px;
+      }
+      .activity-user {
+        float: left;
+        margin-right: 10px;
+      }
+      .activity-detail {
+        float: left; 
+      }
+      .activity-book-image {
+        border-left: 5px solid gray;
+        padding-left: 5px;
+        float: left;
+      }
+      .activity-book-detail {
+        padding: 0px 0px 0px 8px;  
+        float: left;
+      }
+      .activity-book-name {
+        font: bold 15px arial,sans-serif;
+        color: #04070B;
+      }
+      .activity-book-author {
+        margin-left: 4px;
+        font-style: italic;
+        font-type: arial,sans-serif;
+        color: #1F3D5C;
+      }
+      .activity-book-description {
+        margin-left: 4px;
+        font-style: italic;
+        font-type: arial,sans-serif;
+        color: #1F3D5C;
+      }
+      .activity-book-comment {
+        width: 50%;
+        display: block;
+        margin-left: 20px;
+        margin-bottom: 2px;
+        background-color: #EEEEEC;
+        padding: 2px;
+        color: #1F3D5C;
+      }
+      .activity-comment-user {
+        display: block;
+        float: left;
+      }
+      .activity-comment {
+        display: block;
+        float: left;
+        padding-left: 5px;
+      }
+      .activity-partition {
+        margin: 5px;
+        border-color: #DEE8E8;
+      }
+      .main-content-fixed-layout {
+        padding-bottom: 790px;
+        margin-bottom: -800px;
       }
 
     %script(src="js/jquery.js" type="text/javascript")
@@ -90,7 +185,7 @@
   %body
     %div.navbar.navbar-fixed-top
       %div.navbar-inner
-        %div.container
+        %div.container.container-940
           %a.btn.btn-navbar(data-toggle="collapse"  data-target=".nav-collapse")
             %span.icon-bar
             %span.icon-bar
@@ -129,10 +224,10 @@
                   %li
                     %a(href="#")
                       Profile
-    %div.container
+    %div.container.container-940#container
       %div.row
         %div.span3.sidebar
-          %div.well.sidebar-nav.remove-margin-bottom
+          %div.well.adjust-padding-bottom.sidebar-nav.remove-margin-bottom
             %ul.nav.nav-list#sidebar
               %li.profile-pic-container
                 %a.profile-pic(href="#")
@@ -145,59 +240,53 @@
                 %year 4th Year
               %hr
               %li
-                %a(href="#")
+                %a#sb-activity(href="#")
                   %i.icon-envelope
                   Activity        
                   %div.sidebar-count
                     %span.label.label-info 15
               %li
-                %a(href="#")
+                %a#sb-search(href="#")
                   %i.icon-search 
                   Search
               %li
-                %a#sidebar-bookshelf(href="#")
+                %a#sb-suggestions(href="#")
                   %i.icon-comment 
                   Suggestions
                   %div.sidebar-count
                     %span.label.label-info 10 
               %li
-                %a(href="#")
+                %a#sb-bookshelf(href="#")
                   %i.icon-book 
                   Bookshelf
                   %div.sidebar-count
                     %span.label.label-info 8
               %li
-                %a(href="#")
+                %a#sb-readinglist(href="#")
                   %i.icon-bookmark 
                   Reading List
                   %div.sidebar-count
                     %span.label.label-info 5
               %li
-                %a(href="#")
+                %a#sb-communities(href="#")
                   %i.icon-glass 
                   Communities
                   %div.sidebar-count
                     %span.label.label-info 7
               %li
-                %a(href="#")
+                %a#sb-friends(href="#")
                   %i.icon-heart 
                   Friends
                   %div.sidebar-count 
                     %span.label.label-info 100
               %li
-                %a(href="#")
+                %a#sb-history(href="#")
                   %i.icon-time 
                   History
         %div.span5.main-content
-          %div.well.remove-padding-bottom.remove-margin-bottom#main-content
-            %div.row
-              %ul.breadcrumb.main-breadcrumb
-                %li
-                  %a(href="#") Bookshelf
-                  %span.divider /
-                %li.active Physics
-            %div.row
-              
+          %div.well.adjust-padding-bottom.remove-margin-bottom.transparent.encap-main
+            %div.well.inside-main
+              %div.container-fluid.inside-container#main-content         
       %hr.footer-hr
       %footer
         %p@ SDSLabs 2012     
