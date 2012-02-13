@@ -6,7 +6,7 @@ $(function(){
       success: function(data){
         $("#main-content").html(data);
         var height = $("#main-content").height();
-        $("#container").height(height);
+        $("#container").css("height", height);
       }
     });
   });
@@ -16,6 +16,8 @@ $(function(){
       url: "/search",
       success: function(data){
         $("#main-content").html(data);
+        var height = $("#main-content").height();
+        $("#container").css("height", height);
       }
     });
   });
@@ -74,7 +76,13 @@ $(function(){
       }
     });
   });
-
+  
+  
+  $('.search-extra-info').live('click', function(){
+    $("#search-detail").toggle('slow', function(){
+      
+    });
+  });
 
 });
 

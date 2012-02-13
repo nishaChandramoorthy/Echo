@@ -20,6 +20,9 @@
       .container-940 {
         width:940px;
       }
+      .container-780 {
+        height: 780px;
+      }
       .sidebar{
         margin-top: -10px;
         width: 200px;
@@ -174,7 +177,79 @@
         padding-bottom: 790px;
         margin-bottom: -800px;
       }
-
+      .search-box {
+        display: block;
+        float: left;
+        height: 30px;
+        width: 100%
+      }
+      .search-form {
+        padding:19px;
+        min-height: 20px;
+        background-color: whiteSmoke;
+        height: 100%;
+      }
+      .remove-border {
+        border: none;
+      }
+      .remove-border-radius {
+        border-radius: 0;
+      }
+      .search-partition {
+        margin: 40px 5px 5px 5px;
+        border-color: #DEE8E8;
+      }
+      .search-result-container {
+        padding: 0px;
+      }
+      .search-result-row {
+        padding: 0px 12px 0px 12px;
+        width: auto;
+      }
+      .search-result-item {
+        float: left;
+        width: 152px;
+        height: 180px;
+        margin: 10px 5px 5px 5px;
+        padding: 10px 5px 10px 5px;
+      }
+      .search-book-image {
+        margin-left: 24px;
+        height: 140px;
+      }
+      .search-book-name {
+        font: bold auto arial,sans-serif; 
+        color: #04070B;
+        text-align: center;
+      }
+      .search-book-author {
+        font-style: italic;
+        color: #1F3D5C;
+        text-align:center;
+      }
+      .search-item-extras {
+        display: none;
+      }
+      .search-result-item:hover > div.search-item-extras {
+        display: block;
+      }
+      .search-item-extras {
+        text-align: center;
+        letter-spacing: 6px;
+      }
+      .search-item-extras:hover > a {
+        opacity: 0.5;
+      }
+      .search-item-extras:hover > a:hover {
+        opacity: 1.0;
+      }
+      #search-detail {
+        position:absolute;
+        display:none;
+        z-index:10;
+        opacity: 1.0;
+        background-color: gray;
+      }
     %script(src="js/jquery.js" type="text/javascript")
     %script(src="js/bootstrap-dropdown.js" type="text/javascript")
     %script(src="js/json2.js" type="text/javascript")
@@ -224,7 +299,7 @@
                   %li
                     %a(href="#")
                       Profile
-    %div.container.container-940#container
+    %div.container.container-940.container-780#container
       %div.row
         %div.span3.sidebar
           %div.well.adjust-padding-bottom.sidebar-nav.remove-margin-bottom
