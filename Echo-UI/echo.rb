@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'haml'
 
-set :port, 1234
+set :port, 1236
 
 get '/' do 
   haml :index
@@ -9,6 +9,10 @@ end
 
 get '/bookshelves' do
   haml :bookshelves
+end
+
+get '/bookshelf' do
+  haml :bookshelf
 end
 
 get '/activity' do

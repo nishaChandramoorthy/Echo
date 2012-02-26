@@ -1,4 +1,14 @@
 $(function(){
+ 
+  $("#bookshelf-heading").live("click", function(){
+    $.ajax({
+      url: "/bookshelf",
+      success: function(data){
+        $("#main-content").html(data);
+        var height = $("#main-content").height();
+      }
+    });
+  });
 
   $("#sb-activity").click(function(){
     $.ajax({
