@@ -6,7 +6,7 @@ $(function(){
       success: function(data){
         $("#main-content").html(data);
         var height = $("#main-content").height();
-        $("#container").css("height", height);
+        //$("#container").css("height", height);
       }
     });
   });
@@ -17,7 +17,7 @@ $(function(){
       success: function(data){
         $("#main-content").html(data);
         var height = $("#main-content").height();
-        $("#container").css("height", height);
+        //$("#container").css("height", height);
       }
     });
   });

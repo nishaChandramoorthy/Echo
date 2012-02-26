@@ -1,6 +1,8 @@
 require 'sinatra'
 require 'haml'
 
+set :port, 1234
+
 get '/' do 
   haml :index
 end

@@ -5,6 +5,11 @@
       body {
         padding-top: 40px;
         padding-botton: 40px;
+        background-image: url("img/bg.gif");
+        background-position: left 40px;
+        background-attachment: fixed;
+        background-repeat: repeat;
+        background-color: #131516;
       }
       .sidebar-nav {
         padding: 9px 0px 10px 0;
@@ -127,7 +132,6 @@
         float: left; 
       }
       .activity-book-image {
-        border-left: 5px solid gray;
         padding-left: 5px;
         float: left;
       }
@@ -250,6 +254,10 @@
         opacity: 1.0;
         background-color: gray;
       }
+      .user-small {
+        height: 38px;
+        width: 36px;
+      }
     %script(src="js/jquery.js" type="text/javascript")
     %script(src="js/bootstrap-dropdown.js" type="text/javascript")
     %script(src="js/json2.js" type="text/javascript")
@@ -299,10 +307,10 @@
                   %li
                     %a(href="#")
                       Profile
-    %div.container.container-940.container-780#container
-      %div.row
-        %div.span3.sidebar
-          %div.well.adjust-padding-bottom.sidebar-nav.remove-margin-bottom
+    %div.container.container-940.container-780#container(style="height: auto;")
+      %div.row(style="height: auto;")
+        %div.span3.sidebar(style="height: auto;")
+          %div.well.adjust-padding-bottom.sidebar-nav.remove-margin-bottom(style="height: auto;")
             %ul.nav.nav-list#sidebar
               %li.profile-pic-container
                 %a.profile-pic(href="#")
@@ -358,10 +366,10 @@
                 %a#sb-history(href="#")
                   %i.icon-time 
                   History
-        %div.span5.main-content
-          %div.well.adjust-padding-bottom.remove-margin-bottom.transparent.encap-main
-            %div.well.inside-main
-              %div.container-fluid.inside-container#main-content         
+        %div.span5.main-content(style="height: auto;")
+          %div.well.adjust-padding-bottom.remove-margin-bottom.transparent.encap-main(style="height: auto;")
+            %div.well.inside-main(style="height: auto;")
+              %div.container-fluid.inside-container#main-content(style="height: auto; min-height:800px;")    
       %hr.footer-hr
       %footer
         %p@ SDSLabs 2012     
