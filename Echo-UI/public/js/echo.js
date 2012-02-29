@@ -16,7 +16,12 @@ $(function(){
       success: function(data){
         $("#main-content").html(data);
         var height = $("#main-content").height();
-        //$("#container").css("height", height);
+        var activity = $('#activity');
+        $activity.imagesLoaded(function(){
+          $activity.masonry({
+            columnWidth: 240
+          });
+        });
       }
     });
   });

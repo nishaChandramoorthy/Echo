@@ -1,10 +1,10 @@
 require 'sinatra'
 require 'haml'
 
-set :port, 1236
+set :port, 1237
 
 get '/' do 
-  haml :index
+  haml :index2
 end
 
 get '/bookshelves' do
@@ -20,7 +20,7 @@ get '/activity' do
 end
 
 get '/search' do 
-  haml :search
+  haml :search2
 end
 
 get '/suggestions' do

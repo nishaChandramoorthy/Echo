@@ -1,0 +1,482 @@
+%html
+  %head
+    %link(rel="stylesheet" type="text/css" href="css/bootstrap.css")
+    :css
+      body {
+        padding-top: 40px;
+        padding-botton: 40px;
+        background-image: url("img/b4.jpg");
+        background-position: left 40px;
+        background-attachment: fixed;
+        background-repeat: repeat;
+        background-color: #131516;
+      }
+      .sidebar-nav {
+        padding: 9px 0px 10px 0;
+      }
+      .container-fluid {
+        padding-left: 250px;
+        padding-right: 250px;
+      }
+
+    %link(rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css")
+    %link(rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Leckerli+One")
+    %link(rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Coming+Soon")
+
+
+    :css
+      .container-940 {
+        width:940px;
+      }
+      .container-780 {
+        height: 780px;
+      }
+      .sidebar{
+        margin-top: -10px;
+        width: 200px;
+      }
+      .well {
+        height: 100%;
+        border-radius: 0px;
+        -moz-border-radius: 0px;
+      }
+      .search-query {
+        height: 30px;
+        width: 86%;
+      }
+      .main-content {
+        width: 740px;
+        margin-left: 0px;
+        margin-top: 0px;
+      }
+      .footer-hr {
+        margin-top: 0px;
+      }
+      .adjust-padding-bottom {
+        padding-bottom: 15px;
+      }
+      .remove-margin-bottom {
+        margin-bottom: 0px;
+      }
+      .nav-list > li > a,
+      .nav-list .nav-header {
+        padding: 5px 25px;
+        font-weight: 700;
+        color: #363430;
+        font-family: 'Leckerli One', cursive;
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        letter-spacing: 0.1em;
+      }
+      .profile-pic-container {
+        padding: 10px 10px 10px 0px;
+      } 
+      .nav-list > li > a.profile-pic {
+        height: 125px;
+        width: 125px;
+        overflow:hidden;
+        padding-left: 40px;
+        margin-top: 10px;
+      }
+      .user-info {
+        font-style: normal;
+        font-size: 13px;
+        padding: 6px 37px 6px 25px;
+      }
+      dep {
+        font-size: 10px;
+      }
+      year {
+        font-size: 10px;
+      }
+      .sidebar-count {
+        margin-right: -12px;
+        float: right;
+      }
+      .navbar .app-logo {
+        font-weight: bold;
+      }
+      .transparent {
+        background: url(img/wash-white-30.png);
+      }
+      .inside-main{
+        margin: 0px;
+        padding: 1px;
+        position: relative;
+      }
+      .encap-main {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 20px;
+      }
+      .inside-container {
+        margin: 0px;
+        padding: 0px;
+      }
+      hr {
+        border-color: #57534A;
+      }
+      .breadcrumb {
+        margin-bottom: 5px;
+      }
+      .main-header-partition {
+        margin: 5px;
+      }
+      .book-pic-medium {
+        height: 100px;
+        width: 75px;
+      }
+      .activity-feed {
+        margin: 2px 2px 10px 6px;
+      }
+      .activity-container {
+        display: block;
+      }
+      
+      .activity-book-topic { 
+        margin: 1px 1px 8px 1px;
+      }
+      .activity-user {
+        float: left;
+        margin-right: 10px;
+      }
+      .activity-detail {
+        float: left; 
+      }
+      .activity-book-image {
+        padding-left: 5px;
+        float: left;
+      }
+      .activity-book-detail {
+        padding: 0px 0px 0px 8px;  
+        float: left;
+      }
+      .activity-book-name {
+        font: bold 15px arial,sans-serif;
+        color: #04070B;
+      }
+      .activity-book-author {
+        margin-left: 4px;
+        font-style: italic;
+        font-type: arial,sans-serif;
+        color: #1F3D5C;
+      }
+      .activity-book-description {
+        margin-left: 4px;
+        font-style: italic;
+        font-type: arial,sans-serif;
+        color: #1F3D5C;
+      }
+      .activity-book-comment {
+        width: 50%;
+        display: block;
+        margin-left: 20px;
+        margin-bottom: 2px;
+        background-color: #EEEEEC;
+        padding: 2px;
+        color: #1F3D5C;
+      }
+      .activity-comment-user {
+        display: block;
+        float: left;
+      }
+      .activity-comment {
+        display: block;
+        float: left;
+        padding-left: 5px;
+      }
+      .activity-partition {
+        margin: 5px;
+        border-color: #DEE8E8;
+      }
+      .main-content-fixed-layout {
+        padding-bottom: 790px;
+        margin-bottom: -800px;
+      }
+      .search-box {
+        display: block;
+        float: left;
+        height: auto;
+        width: 100%
+      }
+      .search-form {
+        padding:12px;
+        padding-top: 25px;
+      }
+      .remove-border {
+        border: none;
+      }
+      .remove-border-radius {
+        border-radius: 0;
+      }
+      .search-partition {
+        margin: 3px 5px 5px 5px;
+        border-color: #57534A;
+      }
+      .search-result-container {
+        padding: 0px;
+      }
+      .search-result-row {
+        padding: 0px 12px 0px 12px;
+        width: auto;
+      }
+      .search-result-item {
+        float: left;
+        width: 152px;
+        height: auto;
+        margin: 10px 5px 5px 5px;
+        padding: 10px 5px 10px 5px;
+        text-align: center;
+      }
+      .search-book-image {
+        height: 140px;
+        border-top: 6px solid;
+        border-top-color: gray;
+        border-right: 6px solid;
+        border-right-color: gray;
+        border-top-left-radius: 12px 9px;
+        border-bottom-right-radius: 12px 9px;
+        -moz-border-top-left-radius: 12px 9px;
+        -moz-border-bottom-right-radius: 12px 9px;
+      }
+      .search-book-name {
+        font-family: 'Coming Soon', cursive; 
+        color: #04070B;
+        text-align: center;
+        font-weight: 700;
+        padding-top: 5px;
+      }
+      .search-book-author {
+        font-style: italic;
+        color: #660000;
+        text-align:center;
+        font-family: 'Coming Soon', cursive;
+        font-weight: 700;
+      }
+      .search-item-extras {
+        display: none;
+      }
+      .search-result-item:hover > div.search-item-extras {
+        display: block;
+      }
+      .search-item-extras {
+        text-align: center;
+        letter-spacing: 6px;
+      }
+      .search-item-extras:hover > a {
+        opacity: 0.5;
+      }
+      .search-item-extras:hover > a:hover {
+        opacity: 1.0;
+      }
+      #search-detail {
+        position:absolute;
+        display:none;
+        z-index:10;
+        opacity: 1.0;
+        background-color: gray;
+      }
+      .user-small {
+        height: 38px;
+        width: 36px;
+      }
+      .navbar-inner {
+        background-image: none;
+        background-color: black;
+      }
+      .well {
+        border: none;
+        background: none;
+      }
+      .main-content {
+        background-image: url("img/mc.jpg");
+        background-repeat: repeat-y;
+        background-size: 100%;
+      }
+      .sidebar {
+        margin-left: 6px;
+        margin-right: 6px;
+      }
+      .breadcrumb  {
+        background:none;
+        box-shadow: none;
+        background-image: url("img/bcr.jpg");
+        color: white;
+      }
+      .breadcrumb  a {
+        color: white;
+        font-family: 'Leckerli One', cursive;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+      }
+      .search-box input {
+        background-image: url("img/s4.jpg");
+        color: #563436;
+        font-weight: 700;
+        width: 86%;
+      }
+      .brand-heading {
+        font-size: 50px;
+        margin-top: 26px;
+        color: white;
+        padding-left: 46px;
+        font-family:'Leckerli One', cursive;
+      }
+      .btn { 
+        height: 30px;
+        font-family: 'Coming Soon', cursive;
+        font-weight: bold;
+       }
+       .user-info > strong {
+         font-family: 'Coming Soon', cursive;
+         font-weight: bold;
+         font-size: 15px;
+       }
+       .user-info > dep { 
+         font-family: 'Coming Soon', cursive;
+         font-weight: 700;
+         font-size: 12px;
+       }
+       .user-info > year { 
+         font-family: 'Coming Soon', cursive;
+         font-weight: 700;
+         font-size: 12px;
+       }
+       .navbar-list li > a {
+         font-family: 'Coming Soon', cursive;
+         font-weight: 700;
+         font-size: 12px;
+         letter-spacing: 0.2em;
+       }
+       .label-info {
+         background-color: #603311;
+       }
+       .navbar .nav > li > a {
+         padding-right: 36px;
+         padding-left: 36px;
+       }
+    %script(src="js/jquery.js" type="text/javascript")
+    %script(src="js/bootstrap-dropdown.js" type="text/javascript")
+    %script(src="js/json2.js" type="text/javascript")
+    %script(src="js/underscore.js" type="text/javascript")
+    %script(src="js/backbone.js" type="text/javascript")
+    %script(src="js/echo.js" type="text/javascript")    
+
+  %body
+    %div.navbar.navbar-fixed-top
+      %div.navbar-inner
+        %div.container.container-940
+          %a.btn.btn-navbar(data-toggle="collapse"  data-target=".nav-collapse")
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %div.nav-collapse.in.collapse
+            %ul.nav.navbar-list
+              %li
+                %a(href="#") 
+                  %i.icon-home.icon-white
+                  Home
+              %li
+                %a(href="#")
+                  %i.icon-book.icon-white
+                  Bookshelf
+              %li
+                %a(href="#")
+                  %i.icon-comment.icon-white
+                  Suggestions
+              %li
+                %a(href="#")
+                  %i.icon-bookmark.icon-white
+                  Reading List
+              %li
+                %a(href="#")
+                  %i.icon-envelope.icon-white
+                  Activity
+            %ul.nav.pull-right
+              %li.dropdown
+                %a.dropdown-toggle(href="#" data-toggle="dropdown")
+                  %i.icon-cog.icon-white
+                  %b.caret
+                %ul.dropdown-menu
+                  %li
+                    %a(href="#")
+                      Profile
+    %div.container.container-940.container-780#container(style="height: auto;")
+      %div.row-fluid
+        %div.span3
+          %div.brand-heading
+            Echo!
+        %div.span8
+          %div.search-box
+            %form.search-form.form-search
+              %input.input-medium.search-query.span8.remove-border-radius(type="text" style="width: 85%;")
+              %button.btn.remove-border-radius(type="submit")
+                Search
+    %div.container.container-940.container-780#container(style="height: auto;")
+      %div.row(style="height: auto; background-image: url('img/mc.jpg'); background-repeat: repeat-y; background-size:100%;")
+        %div.span3.sidebar(style="height: auto;")
+          %div.well.adjust-padding-bottom.sidebar-nav.remove-margin-bottom(style="height: auto;")
+            %ul.nav.nav-list#sidebar
+              %li.profile-pic-container
+                %a.profile-pic(href="#")
+                  %img(src="img/user.jpg" alt="Kumar Ishan")
+              %li.user-info
+                %strong Kumar Ishan  
+                %br
+                %dep Computer Science Engineering
+                %br
+                %year 4th Year
+              %hr
+              %li
+                %a#sb-activity(href="#")
+                  %i.icon-envelope
+                  Activity        
+                  %div.sidebar-count
+                    %span.label.label-info 15
+              %li
+                %a#sb-search(href="#")
+                  %i.icon-search 
+                  Search
+              %li
+                %a#sb-suggestions(href="#")
+                  %i.icon-comment 
+                  Suggestions
+                  %div.sidebar-count
+                    %span.label.label-info 10 
+              %li
+                %a#sb-bookshelf(href="#")
+                  %i.icon-book 
+                  Bookshelf
+                  %div.sidebar-count
+                    %span.label.label-info 8
+              %li
+                %a#sb-readinglist(href="#")
+                  %i.icon-bookmark 
+                  Reading List
+                  %div.sidebar-count
+                    %span.label.label-info 5
+              %li
+                %a#sb-communities(href="#")
+                  %i.icon-glass 
+                  Communities
+                  %div.sidebar-count
+                    %span.label.label-info 7
+              %li
+                %a#sb-friends(href="#")
+                  %i.icon-heart 
+                  Friends
+                  %div.sidebar-count 
+                    %span.label.label-info 100
+              %li
+                %a#sb-history(href="#")
+                  %i.icon-time 
+                  History
+        %div.span5.main-content(style="height: auto;")
+          %div.well.adjust-padding-bottom.remove-margin-bottom.transparent.encap-main(style="height: auto;")
+            %div.well.inside-main(style="height: auto;")
+              %div.container-fluid.inside-container#main-content(style="height: auto; min-height:800px;")    
+      %hr.footer-hr
+      %footer
+        %p@ SDSLabs 2012     
