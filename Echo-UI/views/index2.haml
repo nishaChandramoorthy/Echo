@@ -3,7 +3,7 @@
     %link(rel="stylesheet" type="text/css" href="css/bootstrap.css")
     :css
       body {
-        padding-top: 40px;
+        padding-top: 10px;
         padding-botton: 40px;
         background-image: url("img/b4.jpg");
         background-position: left 40px;
@@ -20,9 +20,9 @@
       }
 
     %link(rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css")
-    %link(rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Leckerli+One")
+    %link(rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Delius+Unicase:700,400")
     %link(rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Coming+Soon")
-
+    %link(rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Leckerli+One")
 
     :css
       .container-940 {
@@ -63,7 +63,7 @@
         padding: 5px 25px;
         font-weight: 700;
         color: #363430;
-        font-family: 'Leckerli One', cursive;
+        font-family: 'Delius Unicase', cursive;
         font-size: 12px;
         text-transform: uppercase;
         margin-bottom: 8px;
@@ -225,7 +225,7 @@
         float: left;
         width: 152px;
         height: auto;
-        margin: 10px 5px 5px 5px;
+        margin: 10px 5px 10px 5px;
         padding: 10px 5px 10px 5px;
         text-align: center;
       }
@@ -277,6 +277,79 @@
         opacity: 1.0;
         background-color: gray;
       }
+      .bookshelf-name {
+        margin-bottom: 0px;
+        border: none;
+      }
+      .bookshelf-partition {
+        margin: 3px 5px 5px 5px;
+        border-color: #57534A;
+      }
+      .bookshelf-result-container {
+        padding: 0px;
+      }
+      .bookshelf-result-row {
+        padding: 0px 12px 0px 12px;
+        width: auto;
+        background-image: url("img/mbs.jpg");
+        background-size: 328px;
+      }
+      .bookshelf-result-item {
+        float: left;
+        width: 152px;
+        height: auto;
+        margin: 10px 5px 10px 5px;
+        padding: 10px 5px 10px 5px;
+        text-align: center;
+      }
+      .bookshelf-book-image {
+        height: 140px;
+        border-top: 6px solid;
+        border-top-color: gray;
+        border-right: 6px solid;
+        border-right-color: gray;
+        border-top-left-radius: 12px 9px;
+        border-bottom-right-radius: 12px 9px;
+        -moz-border-top-left-radius: 12px 9px;
+        -moz-border-bottom-right-radius: 12px 9px;
+      }
+      .bookshelf-book-name {
+        font-family: 'Coming Soon', cursive; 
+        color: #FEF1B5;
+        text-align: center;
+        font-weight: 700;
+        padding-top: 5px;
+      }
+      .bookshelf-book-author {
+        font-style: italic;
+        color: #04070B;
+        text-align:center;
+        font-family: 'Coming Soon', cursive;
+        font-weight: 700;
+      }
+      .bookshelf-item-extras {
+        display: none;
+      }
+      .bookshelf-result-item:hover > div.bookshelf-item-extras {
+        display: block;
+      }
+      .bookshelf-item-extras {
+        text-align: center;
+        letter-spacing: 6px;
+      }
+      .bookshelf-item-extras:hover > a {
+        opacity: 0.5;
+      }
+      .bookshelf-item-extras:hover > a:hover {
+        opacity: 1.0;
+      }
+      #bookshelf-detail {
+        position:absolute;
+        display:none;
+        z-index:10;
+        opacity: 1.0;
+        background-color: gray;
+      }
       .user-small {
         height: 38px;
         width: 36px;
@@ -306,7 +379,7 @@
       }
       .breadcrumb  a {
         color: white;
-        font-family: 'Leckerli One', cursive;
+        font-family: 'Delius Unicase', cursive;
         font-size: 12px;
         text-transform: uppercase;
         letter-spacing: 0.2em;
@@ -366,43 +439,7 @@
 
   %body
     %div.navbar.navbar-fixed-top
-      %div.navbar-inner
-        %div.container.container-940
-          %a.btn.btn-navbar(data-toggle="collapse"  data-target=".nav-collapse")
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          %div.nav-collapse.in.collapse
-            %ul.nav.navbar-list
-              %li
-                %a(href="#") 
-                  %i.icon-home.icon-white
-                  Home
-              %li
-                %a(href="#")
-                  %i.icon-book.icon-white
-                  Bookshelf
-              %li
-                %a(href="#")
-                  %i.icon-comment.icon-white
-                  Suggestions
-              %li
-                %a(href="#")
-                  %i.icon-bookmark.icon-white
-                  Reading List
-              %li
-                %a(href="#")
-                  %i.icon-envelope.icon-white
-                  Activity
-            %ul.nav.pull-right
-              %li.dropdown
-                %a.dropdown-toggle(href="#" data-toggle="dropdown")
-                  %i.icon-cog.icon-white
-                  %b.caret
-                %ul.dropdown-menu
-                  %li
-                    %a(href="#")
-                      Profile
+      %div.navbar-inner(style="height:10px;")
     %div.container.container-940.container-780#container(style="height: auto;")
       %div.row-fluid
         %div.span3

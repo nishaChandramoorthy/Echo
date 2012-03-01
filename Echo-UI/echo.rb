@@ -8,7 +8,7 @@ get '/' do
 end
 
 get '/bookshelves' do
-  haml :bookshelves
+  haml :bookshelves2
 end
 
 get '/bookshelf' do
