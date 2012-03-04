@@ -23,7 +23,7 @@
     %link(rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Delius+Unicase:700,400")
     %link(rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Coming+Soon")
     %link(rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Leckerli+One")
-
+    %link(href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic' rel='stylesheet' type='text/css')
     :css
       .container-940 {
         width:940px;
@@ -63,7 +63,7 @@
         padding: 5px 25px;
         font-weight: 700;
         color: #363430;
-        font-family: 'Delius Unicase', cursive;
+        font-family: 'Ubuntu', sans-serif;
         font-size: 12px;
         text-transform: uppercase;
         margin-bottom: 8px;
@@ -134,39 +134,42 @@
         display: block;
       }
       
-      .activity-book-topic { 
-        margin: 1px 1px 8px 1px;
+      .activity-topic { 
+        float:left;
+        font-family: Ubuntu, sans-serif;
+        max-width: 150px;
       }
       .activity-user {
-        float: left;
-        margin-right: 10px;
+        float: right;
+      }
+      .activity-user > img {
+        height: 40px;
+        vertical-align: middle;
       }
       .activity-detail {
         float: left; 
+        width: 100%;
       }
-      .activity-book-image {
-        padding-left: 5px;
+      .activity-detail > img {
         float: left;
-      }
-      .activity-book-detail {
-        padding: 0px 0px 0px 8px;  
-        float: left;
+        margin-right: 4px;
       }
       .activity-book-name {
-        font: bold 15px arial,sans-serif;
+        font: bold 14px Ubuntu,sans-serif;
         color: #04070B;
+        margin-bottom: 4px;
       }
       .activity-book-author {
-        margin-left: 4px;
+        margin-bottom: 4px;
         font-style: italic;
-        font-type: arial,sans-serif;
-        color: #1F3D5C;
+        font-family: Ubuntu,sans-serif;
+        color: #04070B;
       }
       .activity-book-description {
         margin-left: 4px;
-        font-style: italic;
-        font-type: arial,sans-serif;
+        font-family: Ubuntu,sans-serif;
         color: #1F3D5C;
+        font-size: 12px;
       }
       .activity-book-comment {
         width: 50%;
@@ -241,7 +244,7 @@
         -moz-border-bottom-right-radius: 12px 9px;
       }
       .search-book-name {
-        font-family: 'Coming Soon', cursive; 
+        font-family: 'Ubuntu', sans-serif; 
         color: #04070B;
         text-align: center;
         font-weight: 700;
@@ -251,8 +254,7 @@
         font-style: italic;
         color: #660000;
         text-align:center;
-        font-family: 'Coming Soon', cursive;
-        font-weight: 700;
+        font-family: 'Ubuntu', sans-serif;
       }
       .search-item-extras {
         display: none;
@@ -314,7 +316,7 @@
         -moz-border-bottom-right-radius: 12px 9px;
       }
       .bookshelf-book-name {
-        font-family: 'Coming Soon', cursive; 
+        font-family: 'Ubuntu', sans-serif; 
         color: #FEF1B5;
         text-align: center;
         font-weight: 700;
@@ -324,8 +326,7 @@
         font-style: italic;
         color: #04070B;
         text-align:center;
-        font-family: 'Coming Soon', cursive;
-        font-weight: 700;
+        font-family: 'Ubuntu', sans-serif;
       }
       .bookshelf-item-extras {
         display: none;
@@ -395,25 +396,25 @@
         margin-top: 26px;
         color: white;
         padding-left: 46px;
-        font-family:'Leckerli One', cursive;
+        font-family:'Ubuntu', sans-serif;
       }
       .btn { 
         height: 30px;
-        font-family: 'Coming Soon', cursive;
+        font-family: 'Ubuntu', sans-serif;
         font-weight: bold;
        }
        .user-info > strong {
-         font-family: 'Coming Soon', cursive;
+         font-family: 'Ubuntu', sans-serif;
          font-weight: bold;
          font-size: 15px;
        }
        .user-info > dep { 
-         font-family: 'Coming Soon', cursive;
+         font-family: 'Ubuntu', sans-serif;
          font-weight: 700;
          font-size: 12px;
        }
        .user-info > year { 
-         font-family: 'Coming Soon', cursive;
+         font-family: 'Ubuntu', sans-serif;
          font-weight: 700;
          font-size: 12px;
        }
@@ -430,6 +431,89 @@
          padding-right: 36px;
          padding-left: 36px;
        }
+       .act-reading {
+         width: 100px;
+         float: left;
+         height: 100px;
+       }
+       .act-reading-big {
+         width: 200px;
+         float: left;
+         height: 340px;
+       }
+       .act-shared-med {
+         width: 198px;
+         float: left;
+         height: 150px;
+       }
+       .act-liked-med {
+         width: 198px;
+         float: left;
+         height: 150px;
+       }
+       .act-new {
+         width: 436px;
+         float: left;
+         height: 150px;
+       }
+       .act-arrival-hd {
+         font-family: "Ubuntu", sans-serif;
+         font-weight: bold;
+       }
+       .act-arrival-book-list {
+         height: auto;
+       }
+       .act-arrival-book {
+         float: left;
+         height: auto;
+         text-align: center;
+         margin: 2px;
+         padding: 2px;
+       }
+       .act-arrival-book-img {
+         padding: 2px;
+         margin: 2px;
+       }
+       .act-arrival-book-name {
+         font-family: "Ubuntu", sans-serif;
+         text-align: center;
+         font-size: 12px;
+         font-weight: bold;
+       }
+       .act-arrival-book-author {
+         font-family: "Ubuntu", sans-serif;
+         font-style: italic;
+         text-align: center;
+         font-size: 12px;
+       }
+       .act-arrival-book-img > a > img {
+         height: 80px;
+         vertical-align: middle;
+         border-top: 6px solid;
+         border-top-color: gray;
+         border-right: 6px solid;
+         border-right-color: gray;
+         border-top-left-radius: 12px 9px;
+         border-bottom-right-radius: 12px 9px;
+         -moz-border-top-left-radius: 12px 9px;
+         -moz-border-bottom-right-radius: 12px 9px;
+       } 
+       .act-new-community {
+         width: 318px;
+         float: left;
+         height: 150px;
+       }
+       .act-comm-suggestion {
+         width: 200px;
+         float: left;
+         height: 150px;
+       }
+       #activity > div {
+         padding: 10px;
+         margin: 10px;
+         border-top: 2px black solid;
+       }
+   
     %script(src="js/jquery.js" type="text/javascript")
     %script(src="js/bootstrap-dropdown.js" type="text/javascript")
     %script(src="js/json2.js" type="text/javascript")
@@ -467,7 +551,7 @@
                 %year 4th Year
               %hr
               %li
-                %a(href="#" data-url="activity")
+                %a(href="#" data-url="act")
                   %i.icon-envelope
                   Activity        
                   %div.sidebar-count
